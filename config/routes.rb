@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'welcome#index'
+
 
   get 'session/new'
   get '/login' => 'session#new' # login form
@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     delete '/login' => 'session#destroy' # logout (delete session)
 
     resources :users
+
+    resources :trainings
 
 end
