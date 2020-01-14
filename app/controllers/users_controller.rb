@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_if_logged_in, except: [:new]
+  before_action :check_if_logged_in, except: [:new, :create]
 
   before_action :check_if_admin, only: [ :index ]
 
@@ -8,16 +8,17 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+
   end
 
   def create
     @user = User.create user_params
     if @user.persisted?
-      session[:user_id] = @user.id # log them automatically!
+      session[:user_id] = @user.id
       redirect_to user_path(@user.id)
     else
 
-      flash[:errors] = @user.errors.full_messages #ActiveRecord has set these errors
+      flash[:errors] = @user.errors.full_messages
 
       render :new
 
@@ -30,9 +31,16 @@ class UsersController < ApplicationController
 
 
   def show
-
-
     @user = User.find params[:id]
+
+    if @user.client?
+      render :client_show
+    else
+      render :trainer_show
+    end
+
+    @user = User.client.all
+
   end
 
   def edit
