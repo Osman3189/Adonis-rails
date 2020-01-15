@@ -1,6 +1,11 @@
 <h2>Your Clients</h2>
 
 
+<% if @user.trainer? %>
+  <%= link_to 'Add', new_user_path %>
+<% end %>
+
+
 <% @plans.each do |p| %>
 
   <%= link_to p.client.name, plan_path(p.id) %>

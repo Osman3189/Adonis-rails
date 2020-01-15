@@ -5,6 +5,9 @@ class PlansController < ApplicationController
     end
 
     def create
+      @current_user.plans.create name: params[:plan][:name]
+
+      redirect_to plans_path
 
 
     end
@@ -22,14 +25,27 @@ class PlansController < ApplicationController
     end
 
     def update
-    @plan = Plan.find params[:id]
 
+    redirect_to plan_path and return unless @user == @trainer
 
-    redirect_to plan_path
+    plan = Plan.find params[:id]
+    plan.update plan_params
+
+    redirect_to plan_path(plan.id)
+
     end
 
 
     def destroy
     end
+
+    private
+
+    def plan_params
+
+      params.require(:plan).permit( :name, :schedule)
+
+    end
+
 
   end
