@@ -23,6 +23,20 @@
   <%= f.email_field :email %>
   <br>
 
+    <%= f.label :trainer %>
+
+  <select name="trainer_id">
+    <% User.all.each do |trainer| %>
+      <% if trainer.user_type === 'trainer' %>
+        <option value="<%= trainer.id %>">
+          <%= trainer.name %>
+        </option>
+      <% end %>
+    <% end %>
+
+  </select>
+
+
 
 
 

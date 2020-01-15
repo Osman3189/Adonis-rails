@@ -1,0 +1,56 @@
+<h1>Centre Near Me</h1>
+
+
+
+<style>
+  #map {
+    height: 100%;
+  }
+
+  html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+</style>
+
+<div id="map"></div>
+
+<script>
+
+  const users = <%= @users.to_json.html_safe %>
+
+  function initMap() {
+    // var myLatLng = {lat: -25.363, lng: 131.044};
+
+    var bounds = new google.maps.LatLngBounds();
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: {lat: users[0].latitude, lng: users[0].longitude}
+    });
+
+    for( let i = 0; i < users.length; i++){
+
+      const user = users[i]; // get the current item
+
+      var marker = new google.maps.Marker({
+        position: { lat: user.latitude, lng: user.longitude},
+        map: map,
+        title: user.name
+    });
+
+      bounds.extend( marker.position);
+
+    }
+
+    map.fitbounds( bounds ); // make the map fit within the box bounding box
+
+  } // end of initMap
+</script>
+
+
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD9ZjBw__ND9tOkn7v7yfEYBav6AWc3Qc&callback=initMap">
+  </script>

@@ -1,9 +1,9 @@
 User.destroy_all
 
-u1 = User.create! name: 'Malik', email: 'malik@adonis.com.au', password: 'adonis', admin: true, user_type: 'trainer'
+u1 = User.create! name: 'Malik', email: 'malik@adonis.com.au', password: 'adonis', admin: true, user_type: 'trainer', address: '385 Oxford St, Paddington NSW 2021'
 u2 = User.create! name: 'Amin', email: 'amin@adonis.com.au', password: 'adonis', user_type: 'client'
 u3 = User.create! name: 'Jamie', email: 'jamie@adonis.com.au', password: 'adonis', user_type: 'client'
-u4 = User.create! name: 'David', email: 'david@adonis.com.au', password: 'adonis', user_type: 'trainer'
+u4 = User.create! name: 'David', email: 'david@adonis.com.au', password: 'adonis', user_type: 'trainer', address: '9 Salisbury Rd, Castle Hill NSW 2154'
 
 
 puts "Created #{ User.count } users."

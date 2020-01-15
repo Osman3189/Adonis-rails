@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_232125) do
+ActiveRecord::Schema.define(version: 2020_01_15_120303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "noticeboards", force: :cascade do |t|
+    t.text "events"
+    t.text "achievements"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "plans", force: :cascade do |t|
     t.text "name"
@@ -34,6 +41,9 @@ ActiveRecord::Schema.define(version: 2020_01_13_232125) do
     t.text "password_digest"
     t.boolean "admin"
     t.integer "user_type"
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
   end
 
 end
