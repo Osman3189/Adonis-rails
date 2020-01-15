@@ -14,14 +14,18 @@ class PlansController < ApplicationController
     end
 
     def show
-      @user = User.find params[:id]
+      @plan = Plan.find params[:id]
     end
 
     def edit
-
+    @plan = Plan.find params[:id]
     end
 
     def update
+    @plan = Plan.find params[:id]
+
+
+    redirect_to plan_path
     end
 
 

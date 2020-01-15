@@ -1,2 +1,13 @@
-<h1>Plans#edit</h1>
-<p>Find me in app/views/plans/edit.html.erb</p>
+<h2> Update Plan </h2>
+
+<%= form_for @plan do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+
+  <%= f.label :schedule %>
+  <%= f.text_field :schedule%>
+
+  <%= f.submit %>
+
+<% end %>

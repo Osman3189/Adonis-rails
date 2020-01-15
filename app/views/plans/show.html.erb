@@ -1,7 +1,9 @@
 <h1>Plans#show</h1>
 
+<% if @user == @trainer %>
+  <%= link_to 'edit', edit_plan_path %>
+<% end %>
 
-
-<%= @user.client_plans.first.name %>
+<%= @plan.name %>
 <br>
-<%= @user.client_plans.first.schedule %>
+<%= @plan.schedule %>

@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  has_many :client_plans, class_name: 'Plan', foreign_key: 'client_id'
+  belongs_to :client_plan, class_name: 'Plan', foreign_key: 'client_id', optional: true
   has_many :trainer_plans, class_name: 'Plan', foreign_key: 'trainer_id'
 
 

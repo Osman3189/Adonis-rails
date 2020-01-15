@@ -1,4 +1,8 @@
 <h2>Your Clients</h2>
 
 
-<%= User.client.all %>
+<% @plans.each do |p| %>
+
+  <%= link_to p.client.name, plan_path(p.id) %>
+
+<% end %>

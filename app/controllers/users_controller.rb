@@ -33,13 +33,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find params[:id]
 
+
     if @user.client?
+      @plan = Plan.where :client => @user
       render :client_show
     else
+      @plans = @user.trainer_plans
       render :trainer_show
     end
-
-    @user = User.client.all
 
   end
 
