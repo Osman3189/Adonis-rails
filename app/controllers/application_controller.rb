@@ -24,4 +24,6 @@ class ApplicationController < ActionController::Base
     redirect_to login_path unless @current_user.present? && @current_user.admin?
   end
 
+  
+
 end

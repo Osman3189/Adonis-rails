@@ -10,31 +10,50 @@
   </head>
 
   <body>
-    <h1>Adonis Athletics</h1>
 
 <header>
   <nav>
-    <% if @current_user.present? %>
-    Welcome, <%= @current_user.name %>
-    <% if @current_user.admin? %>
-      (admin)
-    <% end %>
 
-    <%= link_to 'Logout', login_path, method:'delete' %>
-    <% else %>
-    <%= link_to 'Login', login_path %>
+    <div class="nav">
+      <div class="logo"><h1>Adonis Athletics.</h1></div>
 
-    <%= link_to 'Register', new_user_path %>
 
-    <% end %>
+    <div class="midNav">
+      <%= link_to 'About Us' %>
+      <%= link_to 'Locations' %>
+      <%= link_to 'Noticeboard', messages_path %>
+      <%= link_to 'Contact Us' %>
 
 
 
 
+    </div>
+
+
+      <div class="leftNav">
+      <% if @current_user.present? %>
+      Welcome, <%= @current_user.name %>
+      <% if @current_user.admin? %>
+        (admin)
+      <% end %>
+
+      <%= link_to 'Logout', login_path, method:'delete' %>
+      <% else %>
+      <%= link_to 'Login', login_path %>
+
+      <%= link_to 'Register', new_user_path %>
+
+      <% end %>
+      </div>
+    </div>
   </nav>
-  <hr>
+
 </header>
+
+<div id="main">
     <%= yield %>
+</div>
+
     <footer>
     <hr>
           &copy; Adonis Athletics

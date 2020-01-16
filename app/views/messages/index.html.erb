@@ -1,0 +1,13 @@
+<h2> Noticeboard </h2>
+
+
+<ul>
+  <% @messages.each do |message| %>
+    <li>
+
+      <%= link_to message.title, message_path(message.id)  %>
+
+
+    </li>
+  <% end %>
+</ul>

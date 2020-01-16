@@ -12,7 +12,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create user_params
+
+    # @user = User.create user_params
+
+    @user = User.new user_params
+    @user.user_type = 'client'
+    @user.save
+
     if @user.persisted?
       session[:user_id] = @user.id
       redirect_to user_path(@user.id)

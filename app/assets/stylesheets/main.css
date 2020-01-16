@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+  margin: 0;
+}
+
+body{
+  background-image: url('bmi-bg.jpg');
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+
+}
+
+a{
+  color: #be1e2d;
+}
+
+nav {
+  background-color: black;
+  height: 100px;
+}
+
+.logo{
+  display: inline-block;
+  width: 20%;
+  box-sizing: border-box;
+  margin-left: 40px;
+  vertical-align: bottom;
+  color: white;
+
+}
+
+.midNav{
+  text-align: right;
+  display: inline-block;
+  width: 40%;
+  box-sizing: border-box;
+  vertical-align: bottom;
+
+}
+
+.leftNav{
+  text-align: right;
+  display: inline-block;
+  width: 30%;
+  box-sizing: border-box;
+  vertical-align: bottom;
+
+}
+
+.slider1{
+  padding: 0;
+  display: block;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+footer{
+  background-image: url('banner-schedule.jpg');
+  height: 150px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.welcome{
+  color: black;
+  text-align: center;
+  margin: 50px;
+}
+
+#vid{
+  display: inline-block;
+  width: 40%;
+  margin-left: 20px;
+}
+
+#fac{
+  color: black;
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.about{
+  margin: 100px;
+
+}
+
+#main{
+  padding-bottom: 150px;
+}

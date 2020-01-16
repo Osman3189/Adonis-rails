@@ -16,10 +16,8 @@ p1 = Plan.create! name: 'Strength',schedule: 'Week1: squats for days. Week2: Dea
 p2 = Plan.create! name: 'Conditioning',schedule: 'Week1: Burpees. Week2: Bench Bench Bench. Week4: Yoga and swimming', client_id: u3.id, trainer_id: u1.id
 
 
+Message.destroy_all
 
-puts "Created #{ Plan.count } plans."
-puts "plan2 has client #{ Plan.second.client.name }"
-puts "plan2 has trainer #{ Plan.second.trainer.name }"
+m1 = Message.create! title: 'What is on this week', content: 'Strongman comp'
 
-
-puts "Client 2 has schedule #{Plan.last.schedule}"
+m2 = Message.create! title: 'Achievements', content: 'Dav lifted a massive 310kg deadlift'

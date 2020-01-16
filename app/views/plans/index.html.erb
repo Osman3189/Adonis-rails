@@ -1,5 +1,8 @@
 <h2> Clients </h2>
 
+<% if @user == @trainer %>
+  <%= link_to 'Add', edit_plan_path %>
+<% end %>
 
 <ul>
   <% @plan.each do |plan| %>
