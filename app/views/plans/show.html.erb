@@ -7,4 +7,4 @@
 
 <%= @plan.name %>
 <br>
-<%= @plan.schedule %>
+<%= @plan.schedule.gsub("\n", "<br>").html_safe %>

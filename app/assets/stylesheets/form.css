@@ -1,0 +1,27 @@
+form#new_user {
+    background-color: #be1e2d;
+    padding: 30px;
+    color: white;
+    width: max-content;
+}
+
+form{
+  background-color: #be1e2d;
+  padding: 30px;
+  color: white;
+  width: max-content;
+}
+
+input#plan_schedule{
+  height: 30px;
+  width: 50%;
+}
+
+
+form#edit_plan{
+  background-color: black;
+  padding: 30px;
+  color: white;
+  width: 100%;
+
+}

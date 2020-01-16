@@ -1,9 +1,9 @@
-<h2> Noticeboard </h2>
+<h2 id = 'noticeTitle' > Noticeboard  </h2>
 
 
 <ul>
   <% @messages.each do |message| %>
-    <li>
+    <li id = 'content'>
 
       <%= link_to message.title, message_path(message.id)  %>
 

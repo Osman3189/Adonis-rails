@@ -1,12 +1,12 @@
-<h2> Profile Page for <%= @user.name %> </h2>
+<h2 id='profile'> Profile Page for <%= @user.name %> </h2>
 
-<p>Your Plan2</p>
+<p id='plan'>Your Plan</p>
 
 
 
 
 <% if @plan.first.nil? %>
-Contact your trainer for a new plan
+Contact your trainer
 <% else %>
 <%= @plan.first.name %>
 <% end %>
@@ -14,7 +14,7 @@ Contact your trainer for a new plan
 <br>
 
 <% if @plan.first.nil? %>
-Contact your trainer for a new plan
+for a new plan
 <% else %>
 <%= @plan.first.schedule %>
 <% end %>

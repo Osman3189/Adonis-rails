@@ -1,8 +1,10 @@
 <h2>
- noticeboard
+  <%= @message.title  %>
+
 </h2>
 
 <% if @current_user.present? && @current_user.admin? %>
+  <%= link_to 'Create Notice', new_message_path(@message.id)  %>
   <%= link_to 'Update Notice', edit_message_path(@message.id)  %>
   <%= link_to 'Delete Notice', message_path(@message.id), method: 'delete'  %>
 <% end %>

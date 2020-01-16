@@ -1,0 +1,12 @@
+#noticeTitle{
+  color: black;
+  font-size: 50px;
+  text-align: center;
+}
+
+#content{
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  list-style-type: none;
+}
