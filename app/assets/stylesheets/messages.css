@@ -10,3 +10,20 @@
   text-align: center;
   list-style-type: none;
 }
+
+#content2{
+  color: black;
+}
+
+.atag{
+  color: black;
+}
+
+#thisWeek{
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  list-style-type: none;
+  padding-top: 50px;
+
+}

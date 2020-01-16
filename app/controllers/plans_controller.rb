@@ -2,10 +2,12 @@ class PlansController < ApplicationController
 
 
     def new
+      @plan = Plan.new
+
     end
 
     def create
-      @current_user.plans.create name: params[:plan][:name]
+      Plan.create plan_params
 
       redirect_to plans_path
 

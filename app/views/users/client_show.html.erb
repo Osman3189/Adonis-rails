@@ -4,6 +4,8 @@
 
 
 
+<div id="schedule">
+
 
 <% if @plan.first.nil? %>
 Contact your trainer
@@ -18,3 +20,5 @@ for a new plan
 <% else %>
 <%= @plan.first.schedule %>
 <% end %>
+
+</div>

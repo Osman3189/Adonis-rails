@@ -1,11 +1,11 @@
 <h2 id = 'noticeTitle' > Noticeboard  </h2>
 
 
-<ul>
+<ul id= 'content2'>
   <% @messages.each do |message| %>
     <li id = 'content'>
 
-      <%= link_to message.title, message_path(message.id)  %>
+      <%= link_to message.title, message_path(message.id), :class => "atag"  %>
 
 
     </li>

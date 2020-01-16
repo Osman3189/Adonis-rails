@@ -1,15 +1,21 @@
 form#new_user {
-    background-color: #be1e2d;
-    padding: 30px;
+  background-image: linear-gradient(to bottom right, #ed553b, #e14d35);
     color: white;
     width: max-content;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
 }
 
 form{
-  background-color: #be1e2d;
+  background-image: linear-gradient(to bottom right, #ed553b, #e14d35);
   padding: 30px;
   color: white;
   width: max-content;
+  font-size: 30px;
 }
 
 input#plan_schedule{
@@ -24,4 +30,59 @@ form#edit_plan{
   color: white;
   width: 100%;
 
+}
+
+#login {
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  padding-top: 70px;
+}
+
+input#email{
+  height: 30px;
+  width: 200px;
+}
+
+input#password{
+  height: 30px;
+  width: 200px;
+}
+
+input{
+  border: none;
+ color: black;
+ /* padding: 10px 20px; */
+ text-decoration: none;
+ margin: 4px 2px;
+ cursor: pointer;
+ font-size: 15px;
+}
+
+#rego{
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding-top: 50px;
+}
+
+
+select{
+  border: none;
+ color: black;
+ background-color: white;
+ /* padding: 10px 20px; */
+ text-decoration: none;
+ margin: 8px 4px;
+ cursor: pointer;
+ font-size: 15px;
+
+}
+
+option{
+  background-color: white;
 }

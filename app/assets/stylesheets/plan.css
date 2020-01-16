@@ -1,0 +1,43 @@
+#schedule{
+  text-align: center;
+}
+
+#plan{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+#yourClients{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  color: black;
+
+}
+
+#clients{
+  text-align: center;
+  color: black;
+
+}
+
+#month{
+  text-align: center;
+}
+
+textarea{
+  height: 200px;
+  vertical-align: top;
+}
+
+
+#updatePlan{
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  padding-top: 20px;
+
+}

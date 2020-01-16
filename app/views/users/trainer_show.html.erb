@@ -1,13 +1,17 @@
-<h2>Your Clients</h2>
+<h2 id='yourClients'>Your Clients</h2>
+
+<div id="clients">
 
 
 <% if @user.trainer? %>
-  <%= link_to 'Add', new_user_path %>
+  <%= link_to 'Add', new_user_path, :class => "atag" %>
 <% end %>
 
 
 <% @plans.each do |p| %>
 
-  <%= link_to p.client.name, plan_path(p.id) %>
+  <%= link_to p.client.name, plan_path(p.id), :class => "atag"%>
 
 <% end %>
+
+</div
