@@ -5,10 +5,9 @@
 }
 
 body{
-  background-image: url('bmi-bg.jpg');
+  background-image: url('background.jpg');
   font-family: 'Hind', sans-serif;
   margin: 0;
-
 }
 
 a{
@@ -16,7 +15,6 @@ a{
   text-decoration: none;
   margin-right: 30px;
   font-weight: bold;
-
 }
 
 
@@ -41,7 +39,6 @@ nav {
   width: 40%;
   box-sizing: border-box;
   color: white;
-
 }
 
 .leftNav{
@@ -51,8 +48,6 @@ nav {
   box-sizing: border-box;
   color: white;
   margin-left: 40px;
-
-
 }
 
 .slider1{
